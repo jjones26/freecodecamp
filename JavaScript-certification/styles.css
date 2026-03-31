@@ -1,0 +1,98 @@
+/* General reset and hacker theme colors */
+body {
+    background-color: #0a0a0a;
+    color: #00ff41; /* Classic Matrix/Hacker Green */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #00ff41;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #003300;
+    padding-bottom: 5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Reusable container style */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input area - Darker background with green text */
+#markdown-input {
+    width: 100%;
+    height: 150px;
+    background-color: #111;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0 0 5px #00ff41;
+}
+
+/* Output and Preview areas */
+#html-output, 
+#preview {
+    min-height: 150px;
+    background-color: #111;
+    color: #00ff41;
+    border: 1px solid #008f11;
+    padding: 15px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+/* Distinguish the Preview area visually */
+#preview {
+    background-color: #050505;
+    border-style: dashed;
+}
+
+/* Styling Markdown elements inside the preview */
+#preview h1, #preview h2, #preview h3 {
+    color: #ffffff; /* Make headers pop in the preview */
+    border-bottom: 1px solid #00ff41;
+}
+
+#preview a {
+    color: #00ff41;
+    text-decoration: underline;
+}
+
+#preview blockquote {
+    border-left: 3px solid #00ff41;
+    margin-left: 10px;
+    padding-left: 15px;
+    font-style: italic;
+    color: #008f11;
+}
+
+#preview strong {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .container:first-child {
+        grid-column: span 2;
+    }
+}
